@@ -1,0 +1,182 @@
+@font-face {
+    font-family: glacial;
+    src: url(../TesteBordas/Fonts/GlacialIndifference-Regular.otf);
+}
+html, body, .cg, main{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+}
+main{
+    background-color: #000021;
+}
+section{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000021;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0;
+    border: 3px solid #cdcdcd;
+    overflow-y: auto;
+}
+p, h3{
+    margin: 0;
+    font-family: glacial;
+    text-align: center;
+    margin: 10px;
+}
+.bordas-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.borda-pastel,
+.borda-duplo-laranja,
+.borda-rastro-azul,
+.borda-dupla-oposta-vermelho,
+.borda-dupla-oposta-vermelho1,
+.borda-branca-linear{
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    background-color: #f0f8ff;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    position: relative;
+}
+.borda-dupla-oposta-vermelho1{
+    position: absolute;
+    z-index: -1;
+}
+.borda-branca-linear{
+    background-color: #cdcdcd;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@property --angle1{
+    syntax: "<angle>";
+    initial-value: 360deg;
+    inherits: false;
+}
+
+@keyframes girar {
+    from{
+        --angle: 45deg
+    }
+    to{
+        --angle: 405deg
+    }
+}
+@keyframes girar1 {
+    from{
+        --angle1: 405deg
+    }
+    to{
+        --angle1: 45deg
+    }
+}
+
+.borda-pastel::after, .borda-pastel::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 3px;
+    border-radius: 15px;
+    animation: 3s girar linear infinite;
+}
+.borda-pastel::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+.borda-duplo-laranja::after, .borda-duplo-laranja::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), transparent, orange, transparent, orange, transparent);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 3px;
+    border-radius: 15px;
+    animation: 3s girar linear infinite;
+}
+.borda-duplo-laranja::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+.borda-rastro-azul::after, .borda-rastro-azul::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), transparent 30%, #006aff);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 3px;
+    border-radius: 15px;
+    animation: 3s girar linear infinite;
+}
+.borda-rastro-azul::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+.borda-dupla-oposta-vermelho::after, .borda-dupla-oposta-vermelho::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), transparent 30%, #ff0000);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 3px;
+    border-radius: 15px;
+    animation: 3s girar linear infinite;
+}
+.borda-dupla-oposta-vermelho::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+.borda-dupla-oposta-vermelho1::after, .borda-dupla-oposta-vermelho1::before{
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle1), #ff0000, transparent 30%);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 3px;
+    border-radius: 15px;
+    animation: 3s girar1 linear infinite;
+}
+.borda-dupla-oposta-vermelho1::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+/* #2600ff */
