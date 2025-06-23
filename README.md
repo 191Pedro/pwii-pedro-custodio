@@ -57,4 +57,16 @@ Após rodar o comando "npm install", caso o projeto possua Webpack ou Vite, tamb
     npm run build
 
 ## Passo 4
-Agora, em uma pasta chamado Vendor, terá um arquivo chamdo ".env.example". Copie e cole esse arquivo nessa mesma pasta e renomeie a cópia como apenas ".env"
+Agora, em uma pasta chamado Vendor, terá um arquivo chamdo ".env.example". Copie e cole esse arquivo nessa mesma pasta e renomeie a cópia como apenas ".env".
+
+## Passo 5
+Para agora, será necessário criar uma chave encriptada para o projeto. Para isso, use o seguinte comando:
+
+    php artisan key:generate
+
+## Passo 6
+O último passo requer que rode as _migrations_ para que seja criado um banco de dados. Isso é feito com o comando a seguir:
+
+    php artisan migrate
+
+Pronto! Após esses passos, seu projeto estará funcionando corretamente.
