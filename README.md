@@ -3,7 +3,7 @@
 ## Requisitos
 Antes de começar a instalação do *Laravel*, é necessário de outros componentes. Você precisa ter instalado na sua máquina o [*PHP*](https://php.net/), [*Composer*](https://getcomposer.org/) e o [*instalador do Laravel*](https://github.com/laravel/installer), além disso, também será necessário o *[Node e o NPM](https://nodejs.org/)*   ou o [*Bundle*](https://bun.sh/) para poder compilar os recursos front-end do seu aplicativo.
 
-Caso não possua esses arquivos instalados em sua máquina, os comandos a seguirem instalam eles.
+Caso não possua esses arquivos instalados em sua máquina, os comandos a seguir instalam eles.
 
 **Comando para Windows PowerShell 💻:**
     
@@ -18,16 +18,18 @@ Caso não possua esses arquivos instalados em sua máquina, os comandos a seguir
 
     /bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.4)"
 
-Após executar o comando a cima para necessário para a sua máquina, reinicie o seu terminal para a execução do próximo código.  Agora que você já possui os componentes solicitados, podemos começar a instalação do *instalador do Laravel* via *Composer*:
+Após executar o comando a cima necessário para a sua máquina, feche e reabra o seu terminal para a execução do próximo código. Agora que você já possui os componentes solicitados, podemos começar a instalação do *instalador do Laravel* via *Composer*:
 
     composer global require laravel/installer
+
 Agora que todos os preparativos foram instalados, você já está pronto para a criança do seu aplicativo *Laravel*!
 
 ## Criação e Iniciação do Projeto 
 Agora que está tudo pronto, podemos executar o nosso primeiro código para a criação do nosso aplicativo *Laravel*:
 
     laravel new example-app
-O *instalador do Laravel* perguntara qual é o seu *framework de teste*, *banco de dados* e *kit inicial preferidos*, selecione com base em suas preferencias. Após a criação do aplicativo, você já pode acessar servidor de desenvolvimento do *Laravel* usando a seguinte sequencia de códigos:
+
+O *instalador do Laravel* perguntará qual é o seu *framework de teste*, *banco de dados* e *kit inicial preferidos*, selecione com base em suas preferencias. Após a criação do aplicativo, você já pode acessar servidor de desenvolvimento do *Laravel* usando a seguinte sequência de códigos:
 
 > **Atenção**: *Cada linha do código deve ser executado **INDIVIDUALMENTE!***
 
